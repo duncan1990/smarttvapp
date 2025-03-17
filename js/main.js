@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         diziTab.classList.toggle("active", type === "dizi");
 
         const jsonFile = type === "film" ? "film.json" : "dizi.json";
-        fetchJsonFile(jsonFile).then(jsonData => {
+        fetchJsonFile(`https://duncan1990.github.io/smarttvapp/${jsonFile}`).then(jsonData => {
             if (!jsonData) return;
 
             data = jsonData;
