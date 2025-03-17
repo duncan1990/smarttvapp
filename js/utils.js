@@ -28,6 +28,7 @@ export const AgeRatings = Object.freeze({
 export const notAvailableImage = "img/not_available.webp";
 
 export function handleImageError(imgElement, height) {
+    imgElement.style.opacity = 0.7;
     imgElement.onerror = null;
     imgElement.src = notAvailableImage;
     imgElement.style.height = height;  

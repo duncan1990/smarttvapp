@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 itemDiv.innerHTML = `<img src="${item.posters}" alt="${item.metadata.title}">`;
                 const imgElement = itemDiv.querySelector("img");
                 imgElement.onerror = function () {
-                    handleImageError(this, "110px");
+                    handleImageError(this, "114px");
                 };
                 itemsDiv.appendChild(itemDiv);
                 itemsArray[nthCatIndex].push(itemDiv);
