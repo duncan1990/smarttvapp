@@ -1,0 +1,557 @@
+[
+    {
+        "id": 72,
+        "name": "Son Eklenenler",
+        "contents": [
+            {
+                "id": 1233,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001270/poster-WebLandscape-1738227205517.jpg",
+                "metadata": {
+                    "summaryLong": "A young wizard discovers a secret world hidden beneath his ordinary city.",
+                    "genre": "Fantasy, Adventure",
+                    "duration": 6900,
+                    "year": "2016",
+                    "imdbRating": "7.1",
+                    "title": "The Arcane Path 2",
+                    "maturityRating": {
+                        "age": "+13"
+                    }
+                }
+            },
+            {
+                "id": 1234,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001271/poster-WebLandscape-1739373464445.jpg",
+                "metadata": {
+                    "summaryLong": "A detective must solve the murder of a famous scientist before his invention falls into the wrong hands.",
+                    "genre": "Mystery, Crime, Drama",
+                    "duration": 7500,
+                    "year": "2017",
+                    "imdbRating": "7.2",
+                    "title": "The Final Equation 3",
+                    "maturityRating": {
+                        "age": "+18"
+                    }
+                }
+            },
+            {
+                "id": 1222,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001259/poster-WebLandscape-1736777106164.jpg",
+                "metadata": {
+                    "summaryLong": "An elite soldier wakes up with no memory and must piece together his past while being hunted.",
+                    "genre": "Sci-Fi, Action",
+                    "duration": 6600,
+                    "year": "2018",
+                    "imdbRating": "7.3",
+                    "title": "Rebirth Protocol 4",
+                    "maturityRating": {
+                        "age": "G"
+                    }
+                }
+            },
+            {
+                "id": 1220,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001257/poster-WebLandscape-1736759968834.jpg",
+                "metadata": {
+                    "summaryLong": "A group of kids embark on a journey to find a lost treasure hidden in their small town.",
+                    "genre": "Adventure, Family",
+                    "duration": 6000,
+                    "year": "2019",
+                    "imdbRating": "7.4",
+                    "title": "The Treasure Hunt 5",
+                    "maturityRating": {
+                        "age": "+7"
+                    }
+                }
+            },
+            {
+                "id": 1209,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001246/poster-WebLandscape-1736339008353.jpg",
+                "metadata": {
+                    "summaryLong": "A retired spy is called back into action when a mysterious hacker threatens global security.",
+                    "genre": "Action, Thriller",
+                    "duration": 7800,
+                    "year": "2020",
+                    "imdbRating": "7.5",
+                    "title": "Ghost Protocol 6",
+                    "maturityRating": {
+                        "age": "+7"
+                    }
+                }
+            },
+            {
+                "id": 1199,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001236/poster-WebLandscape-1728940683969.jpg",
+                "metadata": {
+                    "summaryLong": "A young wizard discovers a secret world hidden beneath his ordinary city.",
+                    "genre": "Fantasy, Adventure",
+                    "duration": 6900,
+                    "year": "2021",
+                    "imdbRating": "7.6",
+                    "title": "The Arcane Path 7",
+                    "maturityRating": {
+                        "age": "+13"
+                    }
+                }
+            },
+            {
+                "id": 892,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100000929/poster-WebLandscape-1718218918975.jpg",
+                "metadata": {
+                    "summaryLong": "A detective must solve the murder of a famous scientist before his invention falls into the wrong hands.",
+                    "genre": "Mystery, Crime, Drama",
+                    "duration": 7500,
+                    "year": "2022",
+                    "imdbRating": "7.7",
+                    "title": "The Final Equation 8",
+                    "maturityRating": {
+                        "age": "+18"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id": 71,
+        "name": "İzlemeye devam et",
+        "contents": [
+            {
+                "id": 1222,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001259/poster-WebLandscape-1736777106164.jpg",
+                "metadata": {
+                    "summaryLong": "An elite soldier wakes up with no memory and must piece together his past while being hunted.",
+                    "genre": "Sci-Fi, Action",
+                    "duration": 6600,
+                    "year": "2023",
+                    "imdbRating": "7.8",
+                    "title": "Rebirth Protocol 9",
+                    "maturityRating": {
+                        "age": "G"
+                    }
+                }
+            },
+            {
+                "id": 1233,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001270/poster-WebLandscape-1738227205517.jpg",
+                "metadata": {
+                    "summaryLong": "A group of kids embark on a journey to find a lost treasure hidden in their small town.",
+                    "genre": "Adventure, Family",
+                    "duration": 6000,
+                    "year": "2024",
+                    "imdbRating": "7.9",
+                    "title": "The Treasure Hunt 10",
+                    "maturityRating": {
+                        "age": "+7"
+                    }
+                }
+            },
+            {
+                "id": 643,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100000680/poster-WebLandscape-1719231732486.jpg",
+                "metadata": {
+                    "summaryLong": "A retired spy is called back into action when a mysterious hacker threatens global security.",
+                    "genre": "Action, Thriller",
+                    "duration": 7800,
+                    "year": "2015",
+                    "imdbRating": "7.0",
+                    "title": "Ghost Protocol 11",
+                    "maturityRating": {
+                        "age": "+7"
+                    }
+                }
+            },
+            {
+                "id": 1112,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001149/poster-WebLandscape-1719313550848.jpg",
+                "metadata": {
+                    "summaryLong": "A young wizard discovers a secret world hidden beneath his ordinary city.",
+                    "genre": "Fantasy, Adventure",
+                    "duration": 6900,
+                    "year": "2016",
+                    "imdbRating": "7.1",
+                    "title": "The Arcane Path 12",
+                    "maturityRating": {
+                        "age": "+13"
+                    }
+                }
+            },
+            {
+                "id": 1102,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001139/poster-WebLandscape-1718361613648.jpg",
+                "metadata": {
+                    "summaryLong": "A detective must solve the murder of a famous scientist before his invention falls into the wrong hands.",
+                    "genre": "Mystery, Crime, Drama",
+                    "duration": 7500,
+                    "year": "2017",
+                    "imdbRating": "7.2",
+                    "title": "The Final Equation 13",
+                    "maturityRating": {
+                        "age": "+18"
+                    }
+                }
+            },
+            {
+                "id": 1106,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001143/poster-WebLandscape-1719306504687.jpg",
+                "metadata": {
+                    "summaryLong": "An elite soldier wakes up with no memory and must piece together his past while being hunted.",
+                    "genre": "Sci-Fi, Action",
+                    "duration": 6600,
+                    "year": "2018",
+                    "imdbRating": "7.3",
+                    "title": "Rebirth Protocol 14",
+                    "maturityRating": {
+                        "age": "G"
+                    }
+                }
+            },
+            {
+                "id": 1110,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001147/poster-WebLandscape-1719312365859.jpg",
+                "metadata": {
+                    "summaryLong": "A group of kids embark on a journey to find a lost treasure hidden in their small town.",
+                    "genre": "Adventure, Family",
+                    "duration": 6000,
+                    "year": "2019",
+                    "imdbRating": "7.4",
+                    "title": "The Treasure Hunt 15",
+                    "maturityRating": {
+                        "age": "+7"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id": 79,
+        "name": "Top IMDB",
+        "contents": [
+            {
+                "id": 1024,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001061/poster-WebLandscape-1718297444809.jpg",
+                "metadata": {
+                    "summaryLong": "A retired spy is called back into action when a mysterious hacker threatens global security.",
+                    "genre": "Action, Thriller",
+                    "duration": 7800,
+                    "year": "2020",
+                    "imdbRating": "7.5",
+                    "title": "Ghost Protocol 16",
+                    "maturityRating": {
+                        "age": "+7"
+                    }
+                }
+            },
+            {
+                "id": 1032,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001069/poster-WebLandscape-1718298233726.jpg",
+                "metadata": {
+                    "summaryLong": "A young wizard discovers a secret world hidden beneath his ordinary city.",
+                    "genre": "Fantasy, Adventure",
+                    "duration": 6900,
+                    "year": "2021",
+                    "imdbRating": "7.6",
+                    "title": "The Arcane Path 17",
+                    "maturityRating": {
+                        "age": "+13"
+                    }
+                }
+            },
+            {
+                "id": 1037,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001074/poster-WebLandscape-1718298743099.jpg",
+                "metadata": {
+                    "summaryLong": "A detective must solve the murder of a famous scientist before his invention falls into the wrong hands.",
+                    "genre": "Mystery, Crime, Drama",
+                    "duration": 7500,
+                    "year": "2022",
+                    "imdbRating": "7.7",
+                    "title": "The Final Equation 18",
+                    "maturityRating": {
+                        "age": "+18"
+                    }
+                }
+            },
+            {
+                "id": 1045,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001082/poster-WebLandscape-1719562985990.jpg",
+                "metadata": {
+                    "summaryLong": "An elite soldier wakes up with no memory and must piece together his past while being hunted.",
+                    "genre": "Sci-Fi, Action",
+                    "duration": 6600,
+                    "year": "2023",
+                    "imdbRating": "7.8",
+                    "title": "Rebirth Protocol 19",
+                    "maturityRating": {
+                        "age": "G"
+                    }
+                }
+            },
+            {
+                "id": 1052,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001089/poster-WebLandscape-1718282727000.jpg",
+                "metadata": {
+                    "summaryLong": "A group of kids embark on a journey to find a lost treasure hidden in their small town.",
+                    "genre": "Adventure, Family",
+                    "duration": 6000,
+                    "year": "2024",
+                    "imdbRating": "7.9",
+                    "title": "The Treasure Hunt 20",
+                    "maturityRating": {
+                        "age": "+7"
+                    }
+                }
+            },
+            {
+                "id": 1053,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001090/poster-WebLandscape-1718284049043.jpg",
+                "metadata": {
+                    "summaryLong": "A retired spy is called back into action when a mysterious hacker threatens global security.",
+                    "genre": "Action, Thriller",
+                    "duration": 7800,
+                    "year": "2015",
+                    "imdbRating": "7.0",
+                    "title": "Ghost Protocol 21",
+                    "maturityRating": {
+                        "age": "+7"
+                    }
+                }
+            },
+            {
+                "id": 1109,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001146/poster-WebLandscape-1719312091811.jpg",
+                "metadata": {
+                    "summaryLong": "A young wizard discovers a secret world hidden beneath his ordinary city.",
+                    "genre": "Fantasy, Adventure",
+                    "duration": 6900,
+                    "year": "2016",
+                    "imdbRating": "7.1",
+                    "title": "The Arcane Path 22",
+                    "maturityRating": {
+                        "age": "+13"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id": 74,
+        "name": "Sana Özel",
+        "contents": [
+            {
+                "id": 1106,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001143/poster-WebLandscape-1719306504687.jpg",
+                "metadata": {
+                    "summaryLong": "A detective must solve the murder of a famous scientist before his invention falls into the wrong hands.",
+                    "genre": "Mystery, Crime, Drama",
+                    "duration": 7500,
+                    "year": "2017",
+                    "imdbRating": "7.2",
+                    "title": "The Final Equation 23",
+                    "maturityRating": {
+                        "age": "+18"
+                    }
+                }
+            },
+            {
+                "id": 1120,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001157/poster-WebLandscape-1719939874376.jpg",
+                "metadata": {
+                    "summaryLong": "An elite soldier wakes up with no memory and must piece together his past while being hunted.",
+                    "genre": "Sci-Fi, Action",
+                    "duration": 6600,
+                    "year": "2018",
+                    "imdbRating": "7.3",
+                    "title": "Rebirth Protocol 24",
+                    "maturityRating": {
+                        "age": "G"
+                    }
+                }
+            },
+            {
+                "id": 1082,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001119/poster-WebLandscape-1718311086740.jpg",
+                "metadata": {
+                    "summaryLong": "A group of kids embark on a journey to find a lost treasure hidden in their small town.",
+                    "genre": "Adventure, Family",
+                    "duration": 6000,
+                    "year": "2019",
+                    "imdbRating": "7.4",
+                    "title": "The Treasure Hunt 25",
+                    "maturityRating": {
+                        "age": "+7"
+                    }
+                }
+            },
+            {
+                "id": 1112,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001149/poster-WebLandscape-1719313550848.jpg",
+                "metadata": {
+                    "summaryLong": "A retired spy is called back into action when a mysterious hacker threatens global security.",
+                    "genre": "Action, Thriller",
+                    "duration": 7800,
+                    "year": "2020",
+                    "imdbRating": "7.5",
+                    "title": "Ghost Protocol 26",
+                    "maturityRating": {
+                        "age": "+7"
+                    }
+                }
+            },
+            {
+                "id": 502,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100000510/poster-WebLandscape-1720438595180.jpg",
+                "metadata": {
+                    "summaryLong": "A young wizard discovers a secret world hidden beneath his ordinary city.",
+                    "genre": "Fantasy, Adventure",
+                    "duration": 6900,
+                    "year": "2021",
+                    "imdbRating": "7.6",
+                    "title": "The Arcane Path 27",
+                    "maturityRating": {
+                        "age": "+13"
+                    }
+                }
+            },
+            {
+                "id": 1095,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001132/poster-WebLandscape-1718358735187.jpg",
+                "metadata": {
+                    "summaryLong": "A detective must solve the murder of a famous scientist before his invention falls into the wrong hands.",
+                    "genre": "Mystery, Crime, Drama",
+                    "duration": 7500,
+                    "year": "2022",
+                    "imdbRating": "7.7",
+                    "title": "The Final Equation 28",
+                    "maturityRating": {
+                        "age": "+18"
+                    }
+                }
+            },
+            {
+                "id": 1109,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001146/poster-WebLandscape-1719312091811.jpg",
+                "metadata": {
+                    "summaryLong": "An elite soldier wakes up with no memory and must piece together his past while being hunted.",
+                    "genre": "Sci-Fi, Action",
+                    "duration": 6600,
+                    "year": "2023",
+                    "imdbRating": "7.8",
+                    "title": "Rebirth Protocol 29",
+                    "maturityRating": {
+                        "age": "G"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id": 80,
+        "name": "İzlemek İçin Son Şans",
+        "contents": [
+            {
+                "id": 1233,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001270/poster-WebLandscape-1738227205517.jpg",
+                "metadata": {
+                    "summaryLong": "A group of kids embark on a journey to find a lost treasure hidden in their small town.",
+                    "genre": "Adventure, Family",
+                    "duration": 6000,
+                    "year": "2024",
+                    "imdbRating": "7.9",
+                    "title": "The Treasure Hunt 30",
+                    "maturityRating": {
+                        "age": "+7"
+                    }
+                }
+            },
+            {
+                "id": 1115,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001152/poster-WebLandscape-1719399577866.jpg",
+                "metadata": {
+                    "summaryLong": "A retired spy is called back into action when a mysterious hacker threatens global security.",
+                    "genre": "Action, Thriller",
+                    "duration": 7800,
+                    "year": "2015",
+                    "imdbRating": "7.0",
+                    "title": "Ghost Protocol 31",
+                    "maturityRating": {
+                        "age": "+7"
+                    }
+                }
+            },
+            {
+                "id": 494,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100000498/poster-WebLandscape-1725637591566.jpg",
+                "metadata": {
+                    "summaryLong": "A young wizard discovers a secret world hidden beneath his ordinary city.",
+                    "genre": "Fantasy, Adventure",
+                    "duration": 6900,
+                    "year": "2016",
+                    "imdbRating": "7.1",
+                    "title": "The Arcane Path 32",
+                    "maturityRating": {
+                        "age": "+13"
+                    }
+                }
+            },
+            {
+                "id": 1100,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001137/poster-WebLandscape-1718361573417.jpg",
+                "metadata": {
+                    "summaryLong": "A detective must solve the murder of a famous scientist before his invention falls into the wrong hands.",
+                    "genre": "Mystery, Crime, Drama",
+                    "duration": 7500,
+                    "year": "2017",
+                    "imdbRating": "7.2",
+                    "title": "The Final Equation 33",
+                    "maturityRating": {
+                        "age": "+18"
+                    }
+                }
+            },
+            {
+                "id": 886,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100000923/poster-WebLandscape-1718202434463.jpg",
+                "metadata": {
+                    "summaryLong": "An elite soldier wakes up with no memory and must piece together his past while being hunted.",
+                    "genre": "Sci-Fi, Action",
+                    "duration": 6600,
+                    "year": "2018",
+                    "imdbRating": "7.3",
+                    "title": "Rebirth Protocol 34",
+                    "maturityRating": {
+                        "age": "G"
+                    }
+                }
+            },
+            {
+                "id": 925,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100000962/poster-WebLandscape-1718200223734.jpg",
+                "metadata": {
+                    "summaryLong": "A group of kids embark on a journey to find a lost treasure hidden in their small town.",
+                    "genre": "Adventure, Family",
+                    "duration": 6000,
+                    "year": "2019",
+                    "imdbRating": "7.4",
+                    "title": "The Treasure Hunt 35",
+                    "maturityRating": {
+                        "age": "+7"
+                    }
+                }
+            },
+            {
+                "id": 996,
+                "posters": "https://v2.demo.saatteknoloji.com.tr/contents/100001033/poster-WebLandscape-1718295230362.jpg",
+                "metadata": {
+                    "summaryLong": "A retired spy is called back into action when a mysterious hacker threatens global security.",
+                    "genre": "Action, Thriller",
+                    "duration": 7800,
+                    "year": "2020",
+                    "imdbRating": "7.5",
+                    "title": "Ghost Protocol 36",
+                    "maturityRating": {
+                        "age": "+7"
+                    }
+                }
+            }
+        ]
+    }
+]

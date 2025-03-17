@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detay Sayfası</title>
+    <link rel="stylesheet" href="css/detail.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/3.30.2/minified.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="info">
+            <h1 id="title"></h1>
+            <div class="meta-info">
+                <ul>
+                    <li id="year"></li>
+                    <li id="duration"></li>
+                    <li id="genre"></li>
+                    <li id="imdbRating"></li>
+                    <li><img id="imgMaturityRating" class="maturityRating"><img id="imgDoNot" class="maturityRating"></li>
+                </ul>
+            </div>
+            <p id="description"></p>
+            <button class="watch-button">
+                <div class="play-icon"></div>
+                İzlemeye Başla
+            </button>
+        </div>
+        <div class="image-container">
+            <img id="image">
+        </div>
+    </div>
+    <script type="module" src="js/detail.js"></script>
+</body>
+
+</html>
