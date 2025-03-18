@@ -1,6 +1,6 @@
 :root {
     --primary-color: #0d1927;
-    --meta-info-color: rgb(163, 162, 162); /* Yıl, Süre, Tür ve IMDb puanını */
+    --meta-info-color: rgb(163, 162, 162); /* Year, Duration, Genre ve IMDb rating */
     --meta-info-dot-color: #32404d;
     --white-color: white;
 }
@@ -47,14 +47,14 @@ h1 {
     height: 100%;
 }
 
-/* Yıl, Süre, Tür ve IMDb puanını yan yana yapmak için */
+/* Year, Duration, Genre ve IMDb rating inline together */
 .meta-info {
     display: flex;
     gap: 16px;
     color: var(--meta-info-color);
     font-size: 14px;
     flex-wrap: wrap;
-    /* Taşarsa alta geçsin */
+    /* Overflow to move below*/
     align-items: center;
     margin-bottom: 0;
 }
