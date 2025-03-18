@@ -1,17 +1,18 @@
 import { fetchJsonFile } from "./utils.js";
 import { handleImageError } from "./utils.js";
+import { imgErrorHeight } from "./utils.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-    const filmTab = document.getElementById("filmTab");
-    const diziTab = document.getElementById("diziTab");
-    const content = document.getElementById("content");
+    var filmTab = document.getElementById("filmTab");
+    var diziTab = document.getElementById("diziTab");
+    var content = document.getElementById("content");
 
-    let activeTab = "film"; // Aktif sekme
-    let focusedTab = "film"; // Hangi sekme üzerinde focus var
-    let focusedItemIndex = 0; // Hangi itemde olduğumuzu tutuyoruz
-    let activeCategoryIndex = 0; // Hangi kategoride olduğumuzu tutuyoruz
-    let itemsArray = [];
-    let data = [];
+    var activeTab = "film"; // Aktif sekme
+    var focusedTab = "film"; // Hangi sekme üzerinde focus var
+    var focusedItemIndex = 0; // Hangi itemde olduğumuzu tutuyoruz
+    var activeCategoryIndex = 0; // Hangi kategoride olduğumuzu tutuyoruz
+    var itemsArray = [];
+    var data = [];
 
     filmTab.focus();
     loadContent("film");
@@ -19,11 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("focusedTab = ", focusedTab);
     console.log("focusedItemIndex = ", focusedItemIndex);
     console.log("activeCategoryIndex = ", activeCategoryIndex);
-
     document.addEventListener("keydown", (event) => {
-        const focusedElement = document.activeElement;
-        const isTabFocused = (focusedElement === filmTab || focusedElement === diziTab);
-        const isItemFocused = focusedElement.classList.contains("item");
+        var focusedElement = document.activeElement;
+        var isTabFocused = (focusedElement === filmTab || focusedElement === diziTab);
+        var isItemFocused = focusedElement.classList.contains("item");
 
         handleKeyPress(event.key, isTabFocused, isItemFocused);
     });
@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
         filmTab.classList.toggle("active", type === "film");
         diziTab.classList.toggle("active", type === "dizi");
 
-        const jsonFile = type === "film" ? "film.json" : "dizi.json";
-        fetchJsonFile(`https://duncan1990.github.io/smarttvapp/${jsonFile}`).then(jsonData => {
+        var jsonFile = type === "film" ? "film.json" : "dizi.json";
+        fetchJsonFile(jsonFile).then(jsonData => {
             if (!jsonData) return;
 
             data = jsonData;
@@ -49,21 +49,21 @@ document.addEventListener("DOMContentLoaded", () => {
         focusedItemIndex = 0;
 
         data.forEach((category, nthCatIndex) => {
-            const categoryDiv = document.createElement("div");
+            var categoryDiv = document.createElement("div");
             categoryDiv.classList.add("category");
             categoryDiv.innerHTML = `<h6>${category.name}</h6>`;
-            const itemsDiv = document.createElement("div");
+            var itemsDiv = document.createElement("div");
             itemsDiv.classList.add("items");
 
             itemsArray.push([]);
             category.contents.forEach((item, index) => {
-                const itemDiv = document.createElement("div");
+                var itemDiv = document.createElement("div");
                 itemDiv.classList.add("item");
                 itemDiv.setAttribute("tabindex", index);
                 itemDiv.innerHTML = `<img src="${item.posters}" alt="${item.metadata.title}">`;
-                const imgElement = itemDiv.querySelector("img");
+                var imgElement = itemDiv.querySelector("img");
                 imgElement.onerror = function () {
-                    handleImageError(this, "114px");
+                    handleImageError(this, imgErrorHeight);
                 };
                 itemsDiv.appendChild(itemDiv);
                 itemsArray[nthCatIndex].push(itemDiv);
@@ -155,8 +155,8 @@ document.addEventListener("DOMContentLoaded", () => {
             activeTab = focusedTab;
             loadContent(activeTab);
         } else if (isItemFocused) {
-            const selectedCategory = data[activeCategoryIndex]; // JSON içindeki kategori
-            const selectedItem = selectedCategory.contents[focusedItemIndex]; // İçindeki item
+            var selectedCategory = data[activeCategoryIndex]; // JSON içindeki kategori
+            var selectedItem = selectedCategory.contents[focusedItemIndex]; // İçindeki item
             openDetailPage(selectedItem);
         }
     }
@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function openDetailPage(item) {
-        const detailData = {
+        var detailData = {
             title: item.metadata.title,
             genre: item.metadata.genre,
             image: item.posters,

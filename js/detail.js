@@ -2,7 +2,7 @@ import * as utils from "./utils.js";
 
 document.addEventListener("DOMContentLoaded", () => { 
 
-    const detailData = JSON.parse(localStorage.getItem("detailData"));
+    var detailData = JSON.parse(localStorage.getItem("detailData"));
     console.log(detailData);
 
     if (detailData) {
