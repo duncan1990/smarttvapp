@@ -15,6 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     filmTab.focus();
     loadContent("film");
+    console.log("activeTab = ", activeTab);
+    console.log("focusedTab = ", focusedTab);
+    console.log("focusedItemIndex = ", focusedItemIndex);
+    console.log("activeCategoryIndex = ", activeCategoryIndex);
 
     document.addEventListener("keydown", (event) => {
         const focusedElement = document.activeElement;
@@ -26,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function loadContent(type) {
         resetTabAndItemIndex(type);
+        console.log("loadContent(type)");
         filmTab.classList.toggle("active", type === "film");
         diziTab.classList.toggle("active", type === "dizi");
 
