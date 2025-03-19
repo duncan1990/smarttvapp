@@ -16,6 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
     var savedFocusedTab = sessionStorage.getItem("sessionFocusedTab");
     var savedActiveCategoryIndex = sessionStorage.getItem("sessionActiveCategoryIndex");
     var savedFocusedItemIndex = sessionStorage.getItem("sessionFocusedItemIndex");
+    console.log("savedActiveTab = ", savedActiveTab);
+    console.log("savedFocusedTab = ", savedFocusedTab);
+    console.log("savedActiveCategoryIndex = ", savedActiveCategoryIndex);
+    console.log("savedFocusedItemIndex = ", savedFocusedItemIndex);
 
     setSavedSessionData();
     setFocusedTab();
@@ -181,6 +185,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 return true;
             }
         } else {
+            console.log("savedActiveTab = ", savedActiveTab);
+            console.log("savedFocusedTab = ", savedFocusedTab);
+            console.log("savedActiveCategoryIndex = ", savedActiveCategoryIndex);
+            console.log("savedFocusedItemIndex = ", savedFocusedItemIndex);
             return false;
         }
     }
