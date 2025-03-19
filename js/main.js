@@ -268,3 +268,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+window.addEventListener("pageshow", (event) => {
+    console.log("Pageshow event tetiklendi!", event.persisted);
+    if (event.persisted) {
+        console.log("Sayfa bfcache'ten geri yüklendi!");
+        location.reload(); // Sayfayı zorla yeniden yükle
+    }
+});
+
