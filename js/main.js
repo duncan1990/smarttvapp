@@ -79,7 +79,12 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("geliyor buraya", focusedItemIndex);
             itemsArray[activeCategoryIndex][focusedItemIndex].focus();
         } else {
-            console.log("else düştü", focusedItemIndex);
+            console.log("savedActiveTab = ", savedActiveTab);
+            console.log("savedFocusedTab = ", savedFocusedTab);
+            console.log("savedActiveCategoryIndex = ", savedActiveCategoryIndex);
+            console.log("savedFocusedItemIndex = ", savedFocusedItemIndex);
+            console.log("else düştü activeCategoryIndex = ", activeCategoryIndex);
+            console.log("else düştü focusedItemIndex = ", focusedItemIndex);
         }
 
     }
