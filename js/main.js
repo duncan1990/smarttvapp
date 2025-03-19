@@ -110,7 +110,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function handleLeftArrow(isTabFocused) {
         if (isTabFocused) {
             focusedTab = (focusedTab === "dizi") ? "film" : "dizi";
-            console.log("istabFocused leftArrow = ", focusedTab);
             (focusedTab === "film" ? filmTab : diziTab).focus();
         } else if (focusedItemIndex != 0) {
             focusedItemIndex--;
