@@ -229,6 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function clearSavedSessionData() {
+        console.log("clearSavedSessionData");
         sessionStorage.clear();
         resetSavedValues();
     }
