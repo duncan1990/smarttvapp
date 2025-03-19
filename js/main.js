@@ -6,20 +6,21 @@ document.addEventListener("DOMContentLoaded", () => {
     var filmTab = document.getElementById("filmTab");
     var diziTab = document.getElementById("diziTab");
     var content = document.getElementById("content");
-
     var activeTab = "film"; // Aktif sekme
     var focusedTab = "film"; // Hangi sekme üzerinde focus var
     var focusedItemIndex = 0; // Hangi itemde olduğumuzu tutuyoruz
     var activeCategoryIndex = 0; // Hangi kategoride olduğumuzu tutuyoruz
     var itemsArray = [];
     var data = [];
+    var savedActiveTab = sessionStorage.getItem("sessionActiveTab");
+    var savedFocusedTab = sessionStorage.getItem("sessionFocusedTab");
+    var savedActiveCategoryIndex = sessionStorage.getItem("sessionActiveCategoryIndex");
+    var savedFocusedItemIndex = sessionStorage.getItem("sessionFocusedItemIndex");
 
-    filmTab.focus();
-    loadContent("film");
-    console.log("activeTab = ", activeTab);
-    console.log("focusedTab = ", focusedTab);
-    console.log("focusedItemIndex = ", focusedItemIndex);
-    console.log("activeCategoryIndex = ", activeCategoryIndex);
+    setSavedSessionData();
+    setFocusedTab();
+    loadContent(activeTab);
+
     document.addEventListener("keydown", (event) => {
         var focusedElement = document.activeElement;
         var isTabFocused = (focusedElement === filmTab || focusedElement === diziTab);
@@ -29,8 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     function loadContent(type) {
-        resetTabAndItemIndex(type);
-        console.log("loadContent(type)");
         filmTab.classList.toggle("active", type === "film");
         diziTab.classList.toggle("active", type === "dizi");
 
@@ -46,8 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function loadData() {
         content.innerHTML = "";
-        focusedItemIndex = 0;
-
+        setIfHasSesionFocusedItemIndex();
         data.forEach((category, nthCatIndex) => {
             var categoryDiv = document.createElement("div");
             categoryDiv.classList.add("category");
@@ -72,6 +70,11 @@ document.addEventListener("DOMContentLoaded", () => {
             categoryDiv.appendChild(itemsDiv);
             content.appendChild(categoryDiv);
         });
+
+        if (checkIfHasSavedData()) {
+            itemsArray[activeCategoryIndex][focusedItemIndex].focus();
+        }
+
     }
 
     function handleKeyPress(key, isTabFocused, isItemFocused) {
@@ -98,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (isTabFocused) {
             focusedTab = (focusedTab === "film") ? "dizi" : "film";
             (focusedTab === "film" ? filmTab : diziTab).focus();
-        } else if (focusedItemIndex + 1 <= itemsArray[activeCategoryIndex].length) {
+        } else if (focusedItemIndex + 1 < itemsArray[activeCategoryIndex].length) {
             focusedItemIndex++;
             itemsArray[activeCategoryIndex][focusedItemIndex].focus();
         }
@@ -107,6 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function handleLeftArrow(isTabFocused) {
         if (isTabFocused) {
             focusedTab = (focusedTab === "dizi") ? "film" : "dizi";
+            console.log("istabFocused leftArrow = ", focusedTab);
             (focusedTab === "film" ? filmTab : diziTab).focus();
         } else if (focusedItemIndex != 0) {
             focusedItemIndex--;
@@ -151,8 +155,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function handleEnterKey(isTabFocused, isItemFocused) {
         if (isTabFocused && focusedTab !== activeTab) {
-            resetCatAndItemIndex();
             activeTab = focusedTab;
+            changeActiveTab(activeTab);
             loadContent(activeTab);
         } else if (isItemFocused) {
             var selectedCategory = data[activeCategoryIndex]; // JSON içindeki kategori
@@ -161,17 +165,68 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    function resetTabAndItemIndex(tabType) {
+    function setFocusedTab() {
+        if (focusedTab == "dizi") {
+            diziTab.focus();
+        } else {
+            filmTab.focus();
+        }
+    }
+
+    function checkIfHasSavedData() {
+        if (savedFocusedItemIndex && savedFocusedTab && savedActiveCategoryIndex && savedActiveTab !== null && savedFocusedItemIndex !== "" && savedFocusedTab !== "" && savedActiveCategoryIndex !== "" && savedActiveTab !== "") {
+            if (!isNaN(savedActiveCategoryIndex) && !isNaN(savedFocusedItemIndex)) {
+                return true;
+            }
+        } else {
+            return false;
+        }
+    }
+
+    function setSavedSessionData() {
+        if (checkIfHasSavedData()) {
+            activeTab = savedActiveTab;
+            focusedTab = savedFocusedTab;
+            activeCategoryIndex = parseInt(savedActiveCategoryIndex);
+            focusedItemIndex = parseInt(savedFocusedItemIndex);
+        }
+    }
+
+    function setIfHasSesionFocusedItemIndex() {
+        if (checkIfHasSavedData()) {
+            focusedItemIndex = parseInt(savedFocusedItemIndex);
+        } else {
+            focusedItemIndex = 0;
+        }
+    }
+
+    function saveDataToStorage() {
+        sessionStorage.setItem("sessionFocusedItemIndex", focusedItemIndex);
+        sessionStorage.setItem("sessionFocusedTab", focusedTab);
+        sessionStorage.setItem("sessionActiveCategoryIndex", activeCategoryIndex);
+        sessionStorage.setItem("sessionActiveTab", activeTab);
+    }
+
+    function clearSavedSessionData() {
+        sessionStorage.clear();
+        resetSavedValues();
+
+    }
+
+    function resetSavedValues() {
+        savedActiveTab = sessionStorage.getItem("sessionActiveTab");
+        savedFocusedTab = sessionStorage.getItem("sessionFocusedTab");
+        savedActiveCategoryIndex = sessionStorage.getItem("sessionActiveCategoryIndex");
+        savedFocusedItemIndex = sessionStorage.getItem("sessionFocusedItemIndex");
+    }
+
+    function changeActiveTab(tabType) {
         activeTab = tabType;
         focusedTab = tabType;
         focusedItemIndex = 0;
         activeCategoryIndex = 0;
         itemsArray = [];
-    }
-
-    function resetCatAndItemIndex() {
-        focusedItemIndex = 0;
-        activeCategoryIndex = 0;
+        clearSavedSessionData();
     }
 
     function openDetailPage(item) {
@@ -185,8 +240,8 @@ document.addEventListener("DOMContentLoaded", () => {
             maturityRating: item.metadata.maturityRating.age,
             imdbRating: item.metadata.imdbRating
         };
-
-        localStorage.setItem("detailData", JSON.stringify(detailData));
+        saveDataToStorage();
+        sessionStorage.setItem("detailData", JSON.stringify(detailData));
         window.location.href = "detail.html";
     }
 

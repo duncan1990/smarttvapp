@@ -2,8 +2,7 @@ import * as utils from "./utils.js";
 
 document.addEventListener("DOMContentLoaded", () => { 
 
-    var detailData = JSON.parse(localStorage.getItem("detailData"));
-    console.log(detailData);
+    var detailData = JSON.parse(sessionStorage.getItem("detailData"));
 
     if (detailData) {
         document.getElementById("title").textContent = detailData.title || "N/A";
