@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (checkIfHasSavedData()) {
             console.log("geliyor buraya", focusedItemIndex);
+            console.log("itemsArray = ", itemsArray);
             itemsArray[activeCategoryIndex][focusedItemIndex].focus();
         } else {
             console.log("savedActiveTab = ", savedActiveTab);
