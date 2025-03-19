@@ -75,6 +75,11 @@ document.addEventListener("DOMContentLoaded", () => {
             content.appendChild(categoryDiv);
         });
 
+        console.log(typeof sessionStorage !== "undefined" ? "sessionStorage çalışıyor" : "sessionStorage desteklenmiyor");
+        sessionStorage.setItem("testKey", "testValue");
+        console.log(sessionStorage.getItem("testKey")); // "testValue" yazmalı
+        
+
         if (checkIfHasSavedData()) {
             console.log("geliyor buraya", focusedItemIndex);
             console.log("itemsArray = ", itemsArray);
@@ -226,7 +231,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function clearSavedSessionData() {
         sessionStorage.clear();
         resetSavedValues();
-
     }
 
     function resetSavedValues() {
