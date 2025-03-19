@@ -72,8 +72,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (checkIfHasSavedData()) {
-            console.log("geliyor buraya ", focusedItemIndex);
+            console.log("geliyor buraya", focusedItemIndex);
             itemsArray[activeCategoryIndex][focusedItemIndex].focus();
+        } else {
+            console.log("else düştü", focusedItemIndex);
         }
 
     }
