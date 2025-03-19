@@ -16,10 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
     var savedFocusedTab = sessionStorage.getItem("sessionFocusedTab");
     var savedActiveCategoryIndex = sessionStorage.getItem("sessionActiveCategoryIndex");
     var savedFocusedItemIndex = sessionStorage.getItem("sessionFocusedItemIndex");
-    console.log("savedActiveTab = ", savedActiveTab);
-    console.log("savedFocusedTab = ", savedFocusedTab);
-    console.log("savedActiveCategoryIndex = ", savedActiveCategoryIndex);
-    console.log("savedFocusedItemIndex = ", savedFocusedItemIndex);
 
     setSavedSessionData();
     setFocusedTab();
@@ -75,22 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
             content.appendChild(categoryDiv);
         });
 
-        console.log(typeof sessionStorage !== "undefined" ? "sessionStorage çalışıyor" : "sessionStorage desteklenmiyor");
-        sessionStorage.setItem("testKey", "testValue");
-        console.log(sessionStorage.getItem("testKey")); // "testValue" yazmalı
-        
-
         if (checkIfHasSavedData()) {
-            console.log("geliyor buraya", focusedItemIndex);
-            console.log("itemsArray = ", itemsArray);
-            itemsArray[activeCategoryIndex][focusedItemIndex].focus();
-        } else {
-            console.log("savedActiveTab = ", savedActiveTab);
-            console.log("savedFocusedTab = ", savedFocusedTab);
-            console.log("savedActiveCategoryIndex = ", savedActiveCategoryIndex);
-            console.log("savedFocusedItemIndex = ", savedFocusedItemIndex);
-            console.log("else düştü activeCategoryIndex = ", activeCategoryIndex);
-            console.log("else düştü focusedItemIndex = ", focusedItemIndex);
+            focusOnCurrentItem();
         }
 
     }
@@ -121,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
             (focusedTab === "film" ? filmTab : diziTab).focus();
         } else if (focusedItemIndex + 1 < itemsArray[activeCategoryIndex].length) {
             focusedItemIndex++;
-            itemsArray[activeCategoryIndex][focusedItemIndex].focus();
+            focusOnCurrentItem();
         }
     }
 
@@ -131,23 +113,23 @@ document.addEventListener("DOMContentLoaded", () => {
             (focusedTab === "film" ? filmTab : diziTab).focus();
         } else if (focusedItemIndex != 0) {
             focusedItemIndex--;
-            itemsArray[activeCategoryIndex][focusedItemIndex].focus();
+            focusOnCurrentItem();
         }
     }
 
     function handleDownArrow(isTabFocused) {
         if (isTabFocused) {
             if (itemsArray.length > 0) {
-                itemsArray[activeCategoryIndex][focusedItemIndex].focus();
+                focusOnCurrentItem();
             }
         } else {
             if (activeCategoryIndex + 1 < itemsArray.length) {
                 activeCategoryIndex++;
                 if (focusedItemIndex < itemsArray[activeCategoryIndex].length) {
-                    itemsArray[activeCategoryIndex][focusedItemIndex].focus();
+                    focusOnCurrentItem();
                 } else {
                     focusedItemIndex = 0;
-                    itemsArray[activeCategoryIndex][focusedItemIndex].focus();
+                    focusOnCurrentItem();
                 }
             }
         }
@@ -158,11 +140,11 @@ document.addEventListener("DOMContentLoaded", () => {
             if (activeCategoryIndex > 0) {
                 activeCategoryIndex--;
                 if (focusedItemIndex < itemsArray[activeCategoryIndex].length) {
-                    itemsArray[activeCategoryIndex][focusedItemIndex].focus();
+                    focusOnCurrentItem();
                 }
                 else {
                     focusedItemIndex = 0;
-                    itemsArray[activeCategoryIndex][focusedItemIndex].focus();
+                    focusOnCurrentItem();
                 }
             } else {
                 (activeTab === "film" ? filmTab : diziTab).focus();
@@ -196,10 +178,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 return true;
             }
         } else {
-            console.log("savedActiveTab = ", savedActiveTab);
-            console.log("savedFocusedTab = ", savedFocusedTab);
-            console.log("savedActiveCategoryIndex = ", savedActiveCategoryIndex);
-            console.log("savedFocusedItemIndex = ", savedFocusedItemIndex);
             return false;
         }
     }
@@ -229,7 +207,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function clearSavedSessionData() {
-        console.log("clearSavedSessionData");
         sessionStorage.clear();
         resetSavedValues();
     }
@@ -239,6 +216,10 @@ document.addEventListener("DOMContentLoaded", () => {
         savedFocusedTab = sessionStorage.getItem("sessionFocusedTab");
         savedActiveCategoryIndex = sessionStorage.getItem("sessionActiveCategoryIndex");
         savedFocusedItemIndex = sessionStorage.getItem("sessionFocusedItemIndex");
+    }
+
+    function focusOnCurrentItem() {
+        itemsArray[activeCategoryIndex][focusedItemIndex].focus();
     }
 
     function changeActiveTab(tabType) {
@@ -269,11 +250,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("pageshow", (event) => {
-    console.log("Pageshow event tetiklendi!", event.persisted);
     if (event.persisted) {
-        console.log("Sayfa bfcache'ten geri yüklendi!");
-        //location.reload(); // Sayfayı zorla yeniden yükle
-        itemsArray[activeCategoryIndex][focusedItemIndex].focus();
+        focusOnCurrentItem();
     }
 });
 
