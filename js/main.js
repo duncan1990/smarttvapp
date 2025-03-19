@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (checkIfHasSavedData()) {
-            console.log("geliyor buraya");
+            console.log("geliyor buraya ", focusedItemIndex);
             itemsArray[activeCategoryIndex][focusedItemIndex].focus();
         }
 
@@ -174,7 +174,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function checkIfHasSavedData() {
-        console.log("savedFocusedItemIndex = ", savedFocusedItemIndex);
         if (savedFocusedItemIndex && savedFocusedTab && savedActiveCategoryIndex && savedActiveTab !== null && savedFocusedItemIndex !== "" && savedFocusedTab !== "" && savedActiveCategoryIndex !== "" && savedActiveTab !== "") {
             if (!isNaN(savedActiveCategoryIndex) && !isNaN(savedFocusedItemIndex)) {
                 return true;
