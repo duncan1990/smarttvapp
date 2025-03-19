@@ -174,6 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function checkIfHasSavedData() {
+        console.log("savedFocusedItemIndex = ", savedFocusedItemIndex);
         if (savedFocusedItemIndex && savedFocusedTab && savedActiveCategoryIndex && savedActiveTab !== null && savedFocusedItemIndex !== "" && savedFocusedTab !== "" && savedActiveCategoryIndex !== "" && savedActiveTab !== "") {
             if (!isNaN(savedActiveCategoryIndex) && !isNaN(savedFocusedItemIndex)) {
                 return true;
